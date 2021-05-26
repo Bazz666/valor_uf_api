@@ -2,8 +2,8 @@ class UfsController < ApplicationController
   before_action :set_uf, only: [:show, :update, :destroy]
 
   def by_date
-    @uf= Uf.find_by (date: params[:date])
-    render json: @ufs
+    @uf= Uf.find_by(date: params[:date])
+    render json: @uf
   end
 
   # GET /ufs
