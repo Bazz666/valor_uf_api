@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_06_04_003426) do
 
   create_table "clients", force: :cascade do |t|
     t.string "client_name"
-    t.integer "n_request", default: 0
+    t.integer "n_client", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

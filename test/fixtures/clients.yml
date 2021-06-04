@@ -2,8 +2,8 @@
 
 one:
   client_name: MyString
-  n_request: MyString
+  n_client: MyString
 
 two:
   client_name: MyString
-  n_request: MyString
+  n_client: MyString
