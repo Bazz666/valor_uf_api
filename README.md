@@ -5,20 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version : 2.5.3
 
-* System dependencies
+* Heroku: https://dry-lake-40747.herokuapp.com/
 
-* Configuration
+* Notes: lo que mas me costo de este proyecto fue entender de buena manera como crear el end point " localhost/client/usuario" y que este me mostrara la cantidad de consultas, me costo mucho entender la logica de lo que hace el sql por detras cuando relaciona las tablas de mi schema con las respectivas querys para llegar a cliente.cliente_name y mostrarme que le solicito. no obstante gracias a este problemita pequeño entendi de mejor manera el como se realizan las consultas y como se relaciona la ruta, el controlador (client_request en mi caso) y como client_request hace la consulta a la base de datos.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+muy buen ejercicio.
