@@ -1,7 +1,7 @@
 class UfsController < ApplicationController
   before_action :set_uf, only: [:show, :update, :destroy]
 
-  def by_date
+  def uf_value
     @uf= Uf.find_by(date: params[:date])
     render json: @uf
   end
@@ -46,7 +46,7 @@ class UfsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_uf
-      @uf = Uf.find(params[:id])
+      @uf = Uf.find_by(date:params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
