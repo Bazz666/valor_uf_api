@@ -2,7 +2,7 @@ class UfsController < ApplicationController
   before_action :set_uf, only: [:show, :update, :destroy]
 
   def uf_value
-    @client = Client.find_by(client_name: client.headers["xclient"])
+    @client = Client.find_by(client_name: client.headers["client"])
     @client.n_client += 1
     @client.save
     @uf= Uf.find_by(date: params[:date])

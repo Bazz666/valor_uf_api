@@ -2,7 +2,7 @@ class ClientsController < ApplicationController
     before_action :set_client, only: [:show, :update, :destroy]
 
     def client_request
-        @client= Client.find_by(client_name: params[:id])
+        @client= Client.find_by(client_name: params[:client_name]) # indica que de mi tabla cliente voy a buscar al cliente por su  " client_name" cuando su "client_name" sea el valor " sergio" ***SELECT  "clients".* FROM "clients" WHERE "clients"."client_name" = $1 LIMIT $2  [["client_name", "Sergio"], ["LIMIT", 1]**
         render json: @client
     end
 
@@ -43,7 +43,7 @@ class ClientsController < ApplicationController
 
     
     def client_params
-        params.require(:clients).permit(:client_name, :n_client)
+        params.require(:id).permit(:n_request)
     end
 
 
