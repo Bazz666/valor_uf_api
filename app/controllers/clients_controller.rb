@@ -1,17 +1,17 @@
 class ClientsController < ApplicationController
     before_action :set_client, only: [:show, :update, :destroy]
 
-    def client_client
-        @client= Client.find_by(client_name: params[:client_name])
-        render json: @uf
+    def client_request
+        @client= Client.find_by(client_name: params[:id])
+        render json: @client
     end
 
 
     def index
 
-        @clients = Client.all
+        @client = Client.all
 
-        render json: @clients
+        render json: @client
     end
 
 
@@ -38,12 +38,12 @@ class ClientsController < ApplicationController
     private
     
     def set_client
-        @client = Client.find_by(xclient:params[:client]) #:id
+        @client = Client.find_by(client:params[:id]) #:id
     end
 
     
     def client_params
-        params.require(:client).permit(:client_name, :n_client)
+        params.require(:clients).permit(:client_name, :n_client)
     end
 
 
